@@ -1,0 +1,185 @@
+/*Google Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;500;600;700&display=swap");
+
+/*Variables*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --body-color: #080b16;
+  --body-alter-color: #0b0f16;
+  --container-color: #0d111f;
+  --text-color: #fff;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--body-color);
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 1060px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  padding: 2rem 0 3rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+.heading {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.price-plan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(337px, auto));
+  gap: 1.5rem;
+}
+
+.price-plan__package-1,
+.price-plan__package-2,
+.price-plan__package-3 {
+  background: var(--container-color);
+  border-radius: 1rem;
+
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.price-plan__package-1:hover,
+.price-plan__package-2:hover,
+.price-plan__package-3:hover {
+  transform: scale(1.02);
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.price-plan__top-details {
+  padding: 30px;
+  background: var(--body-alter-color);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.price-plan__name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.price-plan__package-landing {
+  color: rgba(45, 212, 191);
+}
+
+.price-plan__price {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.price-plan__price span {
+  font-size: 1.075rem;
+  font-weight: 500;
+  color: rgb(160, 164, 194);
+}
+
+.price-plan__btn {
+  color: var(--text-color);
+  background: rgba(45, 212, 191, 0.8);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.price-plan__btn:hover {
+  transition: 0.3s all ease-in;
+}
+
+.price-plan__package-landing-btn:hover {
+  background: rgba(45, 212, 191, 0.7);
+}
+
+.price-plan__top-details p {
+  font-size: 0.875rem;
+  color: #178fff;
+  text-align: center;
+}
+
+.price-plan__bottom-details {
+  padding: 30px;
+}
+
+.price-plan__detail-box-item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(30, 41, 58);
+}
+
+.price-plan__detail-box-item .bx {
+  font-size: 21px;
+  color: rgb(5, 150, 105);
+}
+
+.price-plan__detail-box-item p {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.price-plan__package-website {
+  color: #818cf8;
+}
+
+.price-plan__package-website-btn {
+  background: #4f46e5;
+}
+
+.price-plan__package-website-btn:hover {
+  background: rgba(79, 70, 228, 0.7);
+}
+
+.price-plan__package-ecommerce {
+  color: #fbbf24;
+}
+
+.price-plan__package-ecommerce-btn {
+  background: #d97706;
+}
+
+.price-plan__package-ecommerce-btn:hover {
+  background: rgba(217, 119, 6, 0.7);
+}
+
+@media screen and (max-width: 1050px) {
+  header {
+    padding-left: 50px;
+  }
+
+  .price-plan {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  .price-plan {
+    grid-template-columns: 1fr;
+  }
+}

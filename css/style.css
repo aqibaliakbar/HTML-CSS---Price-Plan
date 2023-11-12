@@ -34,6 +34,7 @@ body {
 
 header {
   margin-bottom: 2rem;
+  margin-left: 0;
 }
 .heading {
   text-align: center;
@@ -165,7 +166,7 @@ header {
 
 @media screen and (max-width: 1050px) {
   header {
-    padding-left: 50px;
+    margin-left: 3.125rem;
   }
 
   .price-plan {
@@ -176,9 +177,10 @@ header {
 
 @media screen and (max-width: 500px) {
   header {
-    display: flex;
-    justify-content: center;
+    margin: auto;
+    margin-bottom: 2rem;
   }
+
   .price-plan {
     grid-template-columns: 1fr;
   }
